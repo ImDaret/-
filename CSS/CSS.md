@@ -167,6 +167,11 @@ transform:translateY(-50%)
 ```
 <meta name="viewport" content="initial-scale=0.3333333333333333, maximum-scale=0.3333333333333333, minimum-scale=0.3333333333333333, user-scalable=no">
 ```
+3.
+rem是根据html标签的font-size来计算的，比如html{font-size:16px},div{width:2rem},其实width=32px
+
+em是根据父元素的font-size来计算的，比如span是div的子元素，html{font-size:16px},div{width:2rem；
+font-size:10px},span{font-size:2em},其实span的font-size=20px
 
 优缺点：这种方法适合新项目，老项目修改太大
 
