@@ -237,3 +237,26 @@ animation-play-state: running;（是否正在运行）
 9. 弹性盒子(Flex)：上面说过了，不多说了
 10. 边框：`box-sizing: border-box`将padding内边距和border边框包含在width和height中
 11. 多媒体查询：当宽度小于xx时，将其xxxx
+
+# 九、三列布局
+## 圣杯布局
+两边固定宽度，中间自适应，即将中间子元素的宽度设置为 100%，左边和右边的子元素设置为固定的宽度(负margin保持在同一行)
+
+弊端：当浏览器无线变窄，「圣杯」将会「破碎」掉
+# 双飞翼布局
+出发点：为了解决上面的弊端
+
+为了中间div内容不被遮挡，直接在中间div内部创建子div用于放置内容，在该子div里用margin-left和margin-right为左右两栏div留出位置
+# 十、BFC
+## 定义：
+也叫块级格式化上下文，用于布局块级盒子的一块渲染区域，有一套渲染规则，决定其子元素如何布局以及和其他元素之间的关系和作用
+## 触发条件：
+1. 根元素，即HTML元素
+2. float的值不为none
+3. overflow的值不为visible
+4. display的值为inline-block,table-cell,table-caption
+5. position的值为absolute，fixed
+## 作用：
+1. 组织元素被浮动元素覆盖
+2. 可以包含浮动元素
+3. 阻止margin重叠
