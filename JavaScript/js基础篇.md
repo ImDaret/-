@@ -480,6 +480,17 @@ console.log(a(2)(3))//6
 11. reverse():用于数组元素反转
 12. Math.max.apply():用于查找数组中最高值
 13. Math.min.apply():用于查找数组中最低值
+## 伪数组
+常见的是arguments
+
+特性：
+1. 具有length属性
+2. 按索引方式存储
+3. 没有内置方法，比如pop(),push()
+
+如何转换成真数组:
+1. Array.from(arguments)
+2. 扩展运算符
 
 # 十六、严格模式
 1. 消除js不合理，不严谨的地方，减少怪异行为
